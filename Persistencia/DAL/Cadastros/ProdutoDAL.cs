@@ -2,6 +2,8 @@
 using System.Data.Entity;
 using Modelo.Cadastros;
 using System.Linq;
+using System.Text;
+using System.Threading;
 
 namespace Persistencia.DAL.Cadastros
 {
@@ -15,12 +17,12 @@ namespace Persistencia.DAL.Cadastros
         }
         public Produto ObterProdutoPorId(long id)
         {
-            return context.Produtos.Where(p => p.ProdutoID == id).Include(c => c.Categoria).
+            return context.Produtos.Where(p => p.ProdutoId == id).Include(c => c.Categoria).
             Include(f => f.Fabricante).First();
         }
         public void GravarProduto(Produto produto)
         {
-            if (produto.ProdutoID == null)
+            if (produto.ProdutoId == null)
             {
                 context.Produtos.Add(produto);
             }

@@ -46,9 +46,9 @@ namespace Projeto01.Controllers
             else
             {
                 ViewBag.CategoriaId = new SelectList(categoriaServico.ObterCategoriasClassificadasPorNome(),
-                "CategoriaId", "Nome", produto.CategoriaID);
+                "CategoriaId", "Nome", produto.CategoriaId);
                 ViewBag.FabricanteId = new SelectList(fabricanteServico.ObterFabricantesClassificadosPorNome(),
-                "FabricanteId", "Nome", produto.FabricanteID);
+                "FabricanteId", "Nome", produto.FabricanteId);
             }
         }
 

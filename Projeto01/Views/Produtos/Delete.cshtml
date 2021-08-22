@@ -39,7 +39,7 @@
                 @using (Html.BeginForm("Delete", "Produtos", FormMethod.Post,
                 new { @id = "delete-form", role = "form" }))
                 {
-                    @Html.HiddenFor(m => m.ProdutoID)
+                    @Html.HiddenFor(m => m.ProdutoId)
                     @Html.AntiForgeryToken()
                 }
             </div>
