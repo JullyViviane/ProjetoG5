@@ -1,0 +1,77 @@
+@model IEnumerable < Modeloa . Cadastros . Produto >
+@ {
+    Layout  =  " ~ / Views / Shared / _LayoutPage1.cshtml " ;
+    ViewBag . Título  =  " Listagem de PRODUTOS " ;
+}
+@if ( @TempData [ " Message " ] ! =  null )
+{
+    < div  class = " alert alert-success "  role = " alert " >
+        @TempData [" Message "]
+    </ div >
+}
+< div  class = " panel panel-primary " >
+    < div  class = " panel-header " >
+        Relação de PRODUTOS registrados
+    </ div >
+    < div  class = " panel-body " >
+        < table  class = " table table-listrado table-hover " >
+            < thead >
+                < tr >
+                    < th >
+                        @ Html.DisplayNameFor (model => model.ProdutoId)
+                    </ th >
+                    < th >
+                        @ Html.DisplayNameFor (model => model.Nome)
+                    </ th >
+                    < th > Categoria </ th >
+                    < th > Fabricante </ th >
+                </ tr >
+            </ thead >
+            < tbody >
+                @foreach ( item var  no modelo )  
+                {
+                    < tr >
+                        < td >
+                            @ Html.DisplayFor (modelItem  = >  item . ProdutoId )
+                        </ td >
+                        < td >
+                            @ Html.DisplayFor (modelItem  = >  item . Nome )
+                        </ td >
+                        < td >
+                            @ Html.DisplayFor (modelItem  = >  item . Categoria . Nome )
+                        </ td >
+                        < td >
+                            @ Html.DisplayFor (modelItem  = >  item . Fabricante . Nome )
+                        </ td >
+                        < td >
+                            @ Html.ActionLink ( " Change " , " Editar " , novo  {  id  =  artigo . ProdutoId  } ) |
+                            @ Html.ActionLink ( " Detalhes " , " Detalhes " , novo  {  id  =  item . ProdutoId  } ) |
+                            @ Html.ActionLink ( " Eliminar " , " Delete " , novo  {  id  =  item . ProdutoId  } )
+                        </ td >
+                    </ tr >
+                }
+            </ tbody >
+        </ mesa >
+    </ div >
+    < div  class = " panel-footer panel-info " >
+        @ Html.ActionLink ( "Registrar um novo PRODUTO", "Criar", nulo,
+        novo {  @class  =  " btn btn-success "  } )
+    </ div >
+</ div >
+@section styles {
+    < link  href = " @ Url.Content ( " ~ / content / DataTables / css / dataTables.bootstrap.css " ) "
+          rel = " stylesheet " >
+}
+@section ScriptPage {
+    < script  src = " @ Url.Content ( " ~ / scripts / DataTables / jquery.  dataTables.js " ) " > </ script >
+    < script  src = " @ Url.Content ( " ~ / scripts / DataTables / dataTables.bootstrap.js " ) " > </ script >
+    < script  type = " text / javascript " >
+$ ( documento ). pronto ( função () {
+$ ( ' li ' ). removeClass ( " ativo " );
+$ ( ' #liProdutos ' ). addClass ( " ativo " );
+$ ( ' .table ' ). dataTable ({
+" pedido " : [[ 1 , " asc " ]]
+});
+});
+    </ script >
+}

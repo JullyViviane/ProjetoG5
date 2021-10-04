@@ -1,0 +1,49 @@
+@model Modeloa . Cadastros . Fabricante
+@ {
+    Layout  =  " ~ / Views / Shared / _LayoutPage1.cshtml " ;
+    ViewBag . Título  =  " Registrando um NOVO FABRICANTE " ;
+}
+@ using ( Html . BeginForm ())
+{
+    @ Html.AntiForgeryToken ()
+    < div  class = " panel panel-primary " >
+        < div  class = " panel-header " >
+            Registro  de  um  NOVO  FABRICANTE
+        </ div >
+        < div  class = " panel-body " >
+            < div  class = " form-horizontal " >
+                @ Html.ValidationSummary (true , " " , new  {  @class  =  " text-danger "  } )
+                < div  class = " form-group " >
+                    @ Html.LabelFor (model  = >  model . Nome , htmlAttributes : novo
+                    {
+                    @class  =  " control-label col-md-2 "
+                    } )
+                    < div  class = " col-md-10 " >
+                        @ Html.EditorFor (model  = >  model . Nome , novo
+                        {
+                            htmlAttributes  =
+                        novo  {  @class  =  " form-control "  }
+                        } )
+                        @ Html.ValidationMessageFor (model  = >  model . Nome , " " ,
+                        novo  {  @class  =  " text-danger "  } )
+                    </ div >
+                </ div >
+            </ div >
+        </ div >
+        < div  class = " panel-footer panel-info " >
+            < div  class = " col-md-offset-2 col-md-10 " >
+                < input  type = " submit "  value = " Adicionar fabricante "  class = " btn btn-danger " />
+                @ Html.ActionLink ( " Retornar para a listagem de FABRICANTES " , " Índice " , nulo ,
+                novo  {  @class  =  " btn btn-warning "  } )
+            </ div >
+            < Br />
+            < Br />
+        </ div >
+    </ div >
+}
+@section ScriptPage {
+    < script  src = " ~ / Scripts / jquery.validate.min.js " >
+    </ script >
+    < script  src = " ~ / Scripts / jquery.validate.unobtrusive.min.js " >
+    </ script >
+}

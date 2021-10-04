@@ -1,0 +1,15 @@
+using  System ;
+usando o  sistema . Coleções . Genérico ;
+usando o  sistema . Linq ;
+usando o  sistema . Web ;
+usando  Modeloa . Cadastros ;
+
+namespace  Modeloa . Tabelas
+{
+     classe  pública Categoria
+    {
+        público  longo  CategoriaId { get ; definir ; }
+         string  pública Nome { get ; definir ; }
+         ICollection virtual  pública < Produto > Produtos { get ; definir ; }
+    }
+}

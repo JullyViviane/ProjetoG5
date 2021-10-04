@@ -1,0 +1,125 @@
+<? xml version = " 1.0 " encoding = " utf-8 " ?>
+< root >
+  <! - 
+    Esquema ResX da Microsoft 
+    
+    Versão 2.0
+    
+    O objetivo principal deste formato é permitir um formato XML simples 
+    que é principalmente legível por humanos. A geração e análise do
+    vários tipos de dados são feitos por meio das classes TypeConverter 
+    associados aos tipos de dados.
+    
+    Exemplo:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name = "resmimetype"> text / microsoft-resx </resheader>
+    <resheader name = "version"> 2.0 </resheader>
+    <resheader name = "reader"> System.Resources.ResXResourceReader, System.Windows.Forms, ... </resheader>
+    <resheader name = "writer"> System.Resources.ResXResourceWriter, System.Windows.Forms, ... </resheader>
+    <data name = "Name1"> <value> esta é minha longa string </value> <comment> este é um comentário </comment> </data>
+    <data name = "Color1" type = "System.Drawing.Color, System.Drawing"> Azul </data>
+    <data name = "Bitmap1" mimetype = "application / x-microsoft.net.object.binary.base64">
+        <value> [objeto .NET Framework serializado codificado em base64 mime] </value>
+    </data>
+    <data name = "Icon1" type = "System.Drawing.Icon, System.Drawing" mimetype = "application / x-microsoft.net.object.bytearray.base64">
+        <value> [string codificada em base64 mime que representa uma forma de matriz de bytes do objeto .NET Framework] </value>
+        <comment> Este é um comentário </comment>
+    </data>
+                
+    Há qualquer número de linhas de "reencabeçamento" que contêm linhas simples 
+    pares nome / valor.
+    
+    Cada linha de dados contém um nome e valor. A linha também contém um
+    tipo ou tipo MIME. O tipo corresponde a uma classe .NET que suporta
+    conversão de texto / valor por meio da arquitetura TypeConverter. 
+    As classes que não suportam isso são serializadas e armazenadas com o 
+    conjunto de tipo MIME.
+    
+    O tipo MIME é usado para objetos serializados e informa ao 
+    ResXResourceReader como depersist do objeto. Atualmente não é
+    extensível. Para um determinado tipo MIME, o valor deve ser definido de acordo:
+    
+    Observação - application / x-microsoft.net.object.binary.base64 é o formato 
+    que o ResXResourceWriter irá gerar, mas o leitor pode 
+    leia qualquer um dos formatos listados abaixo.
+    
+    mimetype: application / x-microsoft.net.object.binary.base64
+    valor: o objeto deve ser serializado com 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : e então codificado com codificação base64.
+    
+    mimetype: application / x-microsoft.net.object.soap.base64
+    valor: o objeto deve ser serializado com 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : e então codificado com codificação base64.
+    mimetype: application / x-microsoft.net.object.bytearray.base64
+    valor: o objeto deve ser serializado em uma matriz de bytes 
+            : usando um System.ComponentModel.TypeConverter
+            : e então codificado com codificação base64.
+    ->
+  < xsd : schema  id = " root "  xmlns = " "  xmlns : xsd = " http://www.w3.org/2001/XMLSchema "  xmlns : msdata = " urn: schemas-microsoft-com: xml-msdata " >
+    < xsd : import  namespace = " http://www.w3.org/XML/1998/namespace " />
+    < xsd : element  name = " root "  msdata : IsDataSet = " true " >
+      < xsd : complexType >
+        < xsd : choice  maxOccurs = " unbounded " >
+          < xsd : element  name = " metadata " >
+            < xsd : complexType >
+              < xsd : sequência >
+                < xsd : element  name = " value "  type = " xsd: string "  minOccurs = " 0 " />
+              </ xsd : sequência >
+              < xsd : attribute  name = " name "  use = " required "  type = " xsd: string " />
+              < xsd : attribute  name = " type "  type = " xsd: string " />
+              < xsd : attribute  name = " mimetype "  type = " xsd: string " />
+              < xsd : attribute  ref = " xml: space " />
+            </ xsd : complexType >
+          </ xsd : element >
+          < xsd : element  name = " assembly " >
+            < xsd : complexType >
+              < xsd : attribute  name = " alias "  type = " xsd: string " />
+              < xsd : attribute  name = " name "  type = " xsd: string " />
+            </ xsd : complexType >
+          </ xsd : element >
+          < xsd : nome do elemento  = " dados " >
+            < xsd : complexType >
+              < xsd : sequência >
+                < xsd : element  name = " value "  type = " xsd: string "  minOccurs = " 0 "  msdata : Ordinal = " 1 " />
+                < xsd : element  name = " comment "  type = " xsd: string "  minOccurs = " 0 "  msdata : Ordinal = " 2 " />
+              </ xsd : sequência >
+              < xsd : attribute  name = " name "  type = " xsd: string "  use = " obrigatório "  msdata : Ordinal = " 1 " />
+              < xsd : attribute  name = " type "  type = " xsd: string "  msdata : Ordinal = " 3 " />
+              < xsd : attribute  name = " mimetype "  type = " xsd: string "  msdata : Ordinal = " 4 " />
+              < xsd : attribute  ref = " xml: space " />
+            </ xsd : complexType >
+          </ xsd : element >
+          < xsd : element  name = " resheader " >
+            < xsd : complexType >
+              < xsd : sequência >
+                < xsd : element  name = " value "  type = " xsd: string "  minOccurs = " 0 "  msdata : Ordinal = " 1 " />
+              </ xsd : sequência >
+              < xsd : attribute  name = " name "  type = " xsd: string "  use = " required " />
+            </ xsd : complexType >
+          </ xsd : element >
+        </ xsd : escolha >
+      </ xsd : complexType >
+    </ xsd : element >
+  </ xsd : schema >
+  < resheader  name = " resmimetype " >
+    < valor > texto / microsoft-resx </ valor >
+  </ resheader >
+  < resheader  name = " version " >
+    < valor > 2,0 </ valor >
+  </ resheader >
+  < resheader  name = " reader " >
+    < valor > System.Resources.ResXResourceReader, System.Windows.Forms, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089 </ value >
+  </ resheader >
+  < resheader  name = " escritor " >
+    < valor > System.Resources.ResXResourceWriter, System.Windows.Forms, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089 </ value >
+  </ resheader >
+  < data  name = " Target "  xml : space = " preserve " >
+    <valor>H4sIAAAAAAAEAN1azW7jNhC + F + g7CDq1RdZyskXRBvYutt64MLr5QZwsegtoiXaIUqQqUoGNok / WQX + pr9Ch9UeRkix5vYm32Mta5AyHM98Mhx / z79 // jN6uQ + o84VgQzsbu6WDoOpj5PCBsNXYTuXz1o / v2zddfjS6CcO18zOe9VvNAkomx + yhldO55wn / EIRKDkPgxF3wpBz4PPRRw72w4 / Mk7PfUwqHBBl + OMbhMmSYi3P + DnhDMfRzJB9JIHmIrsO4zMt1qdKxRiESEfj90bZYOQYCRBAxCUeC1d5x0lCGyZY7p0HcQYl0iCpef3As9lzNlqHsEHRO82EYZ5S0QFznZwXk7vupnhmdqMVwrmqvxESB72VHj6OvOOZ4rv5WO38B747wL8LDdq11sfjt0JknjFY4Jcx1ztfEJjNXPsbqPA0eAOLTCF9QqhEycbOimwAJBR / 06cSUJlEuMxw4mMET1xbpIFJf6veHPHf8dszBJKddvAOhirfIBPNzGPcCw3t3hpWjwLXMerKvBMDYV8nXC6uRmTP3zvOldgDlpQXIBBc8Rc8hj / ghmOQTy4QVLiGGI5C / DWnZYZxqJXPMT5aoA + SCXXuUTrD5it5CN4F61dZ0rWOMi / ZBbcMwKZB0IyTrC1yBV6IqutfcZy8DNIJBeucwvRUhPEI4nSZBhkgw9a3KcxD285LSXLwYc7FK8w5NMdb5ox50nsG9aNvBJnrejL1HXB3gQFSEDqinwLL4G9bOl9kKeJftm465xR7XJTtIiJj6Be7xJsBLqG4U9Heo7jZqTnudDVvHKHtfaVww9lxpYW1gxb2Vg355PyUTe5T0qWci + RlVUo9U3MFiB + cbm535mwBxLNbGlDaxckvhOCQwOnDKtarKVvdasXLHB25nLqXq0agJMBhCQC2IEVY / c7y4Vteov8K / Vq1aWqeTgYnFrKAbM4VgBBFFpVyB1EmLQBTqCZjRDdZYch2LdbUtEo1jJH3uMIM4XlXU4 + gBHFWkbm7vLWyNNg046mOog3xb0V72Xk9VrZIfTt + muQ1Rmxe4GqZZNdItpWcnvhqsUZh7Dj4NBKy5e6Z4IEjjMzLqbFzdM6NuHKmZ2cIqvaJjCUxjmWZrJAES6LpV1uLHxV1ZSV3FJSIGuHitK5dVp0 / BuKNN9ZBun9mDavsWkzQ9ql7hcb0d1ggaNLpdc06XExe4zqhjs4o / bItd2xs2x1LlzaRiphbfFKW53q4OEWr + RdQJFGJcHjpQxPzgR5DVTQ6BJFETRNGjWUfXHmKS80eTXvT5eEqQ7PFzWsSWFtsRK0gGiFjVFYGiydkljI90iiBVJt2yQIrWll0WhIw3wdqy7YMctzMxdR / 8 / + SroYfGzSmV nHKWwtVHV62 + jW5YEtuyXoEEVx2x1xwmkSsg6NQbO + tHnWFaVfbA0jz9iOdUJYvjNAbEajU6xakrVnpPJa3T9OjZJNXtUYCt21jZzHYSL0XJipdgq6wvYe4sUwpJfpT4aRdlj3R1Kb8OHdfeRJb51d5pRi9eIMM86qUXZu7H7bsA6SdIrrgGueSKAOkfkGQh0O1ITB / A86oQT2W064RIwssZApweKeDU / PjMeR43mo8IQIaNfXiiN4OFiQFVG + 3skEWTRSd2qIPaHYf0TxNyFaf6trsumf3qT7C / PfR + a + + XiG3LnkzuGSux 6fW9FzZ / bbgyZ94lzHkIvnztD5q68RdexkDyt08e5m7MMXHwVve2SY + hxsp3Z93puGtG6 + z0g8tV09Pjt9 + b9mKw / DTj4 / Ilp7089IPfbBxJHwjDaz0JFLbKcS07Zy7AYLFfe0mvVmGtuIxroF + rOQO0jIukVenKS0ImBwKB1oyTq27fgpyAbK8Rk23INdtG9ikLLa36JBzRBkVapQf5nGsF9J1mLOjC15XjkMi / IpRltxiSUKIJPfxZIskS9h2MdCbB + DPyKaqJeFcIGDGbtOZJRI2DIOF7TyuKxqT9v6Wwq1avPoOtq + AB9iC2AmgS3ga / ZzQmhQ2D2126omFaqoZb2aiqVUPdtqU2i64qyjosx9RS2 + w2FEQZm4ZnP0hPex7V7gD3iF / E1 + oW5WsjsQVbeP3hO0ilEoMh2lPPwEDAfh + S1 / bBnzDZIpAAA = </ value>
+  </ data >
+  < data  name = " DefaultSchema "  xml : space = " preserve " >
+    < valor > dbo </ valor >
+  </ data >
+</ root >

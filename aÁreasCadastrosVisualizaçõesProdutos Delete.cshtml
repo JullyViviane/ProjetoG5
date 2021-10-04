@@ -1,0 +1,64 @@
+@model Modeloa . Cadastros . Produto
+@ {
+    Layout  =  " ~ / Views / Shared / _LayoutPage1.cshtml " ;
+    ViewBag . Title  =  " Visualizando detalhes do PRODUTO a ser vitoriana " ;
+}
+< div  class = " panel panel-primary " >
+    < div  class = " panel-header " >
+        Visualizando detalhes do PRODUTO a ser vista
+    </ div >
+    < div  class = " panel-body " >
+        @ Html.Partial ( "~ / Areas / Cadastros / Visualizações / Produtos / _PartialEditContentPanel.cshtml", Modelo).
+    </ div >
+    < div  class = " panel-footer panel-info " >
+        < a  href = " # "  class = " btn btn-info "  data-toggle = " modal "
+           data-target = " #deleteConfirmationModal " > Removedor </ a >
+        @ Html.ActionLink ( "Retornar para a listagem", "Index", null, new {  @class  =  " btn btn-info "  } )
+    </ div >
+</ div >
+< div  class = " modal fade "  id = " deleteConfirmationModal "  tabindex = " -1 "  role = " dialog "  aria-hidden = " true " >
+    < div  class = " modal-dialog " >
+        < div  class = " modal-content " >
+            < div  class = " modal-header " >
+                < button  type = " button "  class = " close "  data-despedir = " modal "  aria-hidden = " true " >
+                    & times ;
+                </ botão >
+                < h4  class = " modal-title " >
+                    Confirmação de exclusão de PRODUTO
+                </ h4 >
+            </ div >
+            < div  class = " modal-body " >
+                < p >
+                    Você está prestes a remover o produto @ Model.Nome.ToUpper () do cadastro.
+                </ p >
+                < p >
+                    < forte >
+                        Você está certo que deseja prosseguir?
+                    </ forte >
+                </ p >
+                @ using ( Html . BeginForm (" Delete ", " Produtos ", FormMethod . Post ,
+                novo {  @id  =  " delete-form " , role  =  " form "  } ))
+                {
+                    @ Html.HiddenFor (m  = >  m . ProdutoId )
+                    @ Html.AntiForgeryToken ()
+                }
+            </ div >
+            < div  class = " modal-footer " >
+                < button  type = " button "  class = " btn btn-default "  onclick = " $ ('# delete-form'). submit (); " >
+                    Sim, exclua este produto.
+                </ botão >
+                < button  type = " button "  class = " btn btn-primary "  data-despedir = " modal " >
+                    Não, não exclua este produto.
+                </ botão >
+            </ div >
+        </ div >
+    </ div >
+</ div >
+@section ScriptPage {
+    < script  type = " text / javascript " >
+        $ ( documento ). pronto ( função () {
+            $ ( ' li ' ). removeClass ( " ativo " );
+            $ ( ' #liProdutos ' ). addClass ( " ativo " );
+        });
+    </ script >
+}

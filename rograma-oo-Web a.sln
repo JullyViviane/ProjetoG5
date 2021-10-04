@@ -1,0 +1,49 @@
+
+Arquivo de solução do Microsoft Visual Studio, formato versão 12.00
+# Visual Studio Versão 16
+VisualStudioVersion =  16.0.31402.337
+MinimumVisualStudioVersion =  10.0.40219.1
+Projeto ( "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}" ) = "a" , "a \ a.csproj" , "{81E54E2F-A00E-4DBC-B645-9FDDBC896A69}"
+EndProject
+Projeto ( "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}" ) = "Modeloa" , "Modeloa \ Modeloa.csproj" , "{F758DF91-E4D7-4793-8143-A0751C0E6415}"
+EndProject
+Projeto ( "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}" ) = "Persistenciaa" , "Persistenciaa \ Persistenciaa.csproj" , "{3E1ABA5E-B7F4-40CB-870A-F408F7247CF2}"
+EndProject
+Project ( "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}" ) = "Serviçoa" , "Serviçoa \ Serviçoa.csproj" , "{96B31FC4-C7C4-457F-AC19-CAE4A91BC917}"
+EndProject
+Projeto ( "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}" ) = "Aplicaçãoa" , "Aplicaçãoa \ Aplicaçãoa.csproj" , "{9009F89D-DC7C-4057-8784-35036C7FD7A4}"
+EndProject
+Global
+	GlobalSection ( SolutionConfigurationPlatforms ) = preSolution
+		Debug | Qualquer CPU = Depurar | Qualquer CPU
+		Lançamento | Qualquer CPU = Release | Qualquer CPU
+	EndGlobalSection
+	GlobalSection ( ProjectConfigurationPlatforms ) = postSolution
+		{81E54E2F-A00E-4DBC-B645-9FDDBC896A69} . Debug | Qualquer CPU . ActiveCfg = Depurar | Qualquer CPU
+		{81E54E2F-A00E-4DBC-B645-9FDDBC896A69} . Debug | Qualquer CPU . Construir . 0 = Depurar | Qualquer CPU
+		{81E54E2F-A00E-4DBC-B645-9FDDBC896A69} . Lançamento | Qualquer CPU . ActiveCfg = Versão | Qualquer CPU
+		{81E54E2F-A00E-4DBC-B645-9FDDBC896A69} . Lançamento | Qualquer CPU . Construir . 0 = Liberar | Qualquer CPU
+		{F758DF91-E4D7-4793-8143-A0751C0E6415} . Debug | Qualquer CPU . ActiveCfg = Depurar | Qualquer CPU
+		{F758DF91-E4D7-4793-8143-A0751C0E6415} . Debug | Qualquer CPU . Construir . 0 = Depurar | Qualquer CPU
+		{F758DF91-E4D7-4793-8143-A0751C0E6415} . Lançamento | Qualquer CPU . ActiveCfg = Versão | Qualquer CPU
+		{F758DF91-E4D7-4793-8143-A0751C0E6415} . Lançamento | Qualquer CPU . Construir . 0 = Liberar | Qualquer CPU
+		{3E1ABA5E-B7F4-40CB-870A-F408F7247CF2} . Debug | Qualquer CPU . ActiveCfg = Depurar | Qualquer CPU
+		{3E1ABA5E-B7F4-40CB-870A-F408F7247CF2} . Debug | Qualquer CPU . Construir . 0 = Depurar | Qualquer CPU
+		{3E1ABA5E-B7F4-40CB-870A-F408F7247CF2} . Lançamento | Qualquer CPU . ActiveCfg = Versão | Qualquer CPU
+		{3E1ABA5E-B7F4-40CB-870A-F408F7247CF2} . Lançamento | Qualquer CPU . Construir . 0 = Liberar | Qualquer CPU
+		{96B31FC4-C7C4-457F-AC19-CAE4A91BC917} . Debug | Qualquer CPU . ActiveCfg = Depurar | Qualquer CPU
+		{96B31FC4-C7C4-457F-AC19-CAE4A91BC917} . Debug | Qualquer CPU . Construir . 0 = Depurar | Qualquer CPU
+		{96B31FC4-C7C4-457F-AC19-CAE4A91BC917} . Lançamento | Qualquer CPU . ActiveCfg = Versão | Qualquer CPU
+		{96B31FC4-C7C4-457F-AC19-CAE4A91BC917} . Lançamento | Qualquer CPU . Construir . 0 = Liberar | Qualquer CPU
+		{9009F89D-DC7C-4057-8784-35036C7FD7A4} . Debug | Qualquer CPU . ActiveCfg = Depurar | Qualquer CPU
+		{9009F89D-DC7C-4057-8784-35036C7FD7A4} . Debug | Qualquer CPU . Construir . 0 = Depurar | Qualquer CPU
+		{9009F89D-DC7C-4057-8784-35036C7FD7A4} . Lançamento | Qualquer CPU . ActiveCfg = Versão | Qualquer CPU
+		{9009F89D-DC7C-4057-8784-35036C7FD7A4} . Lançamento | Qualquer CPU . Construir . 0 = Liberar | Qualquer CPU
+	EndGlobalSection
+	GlobalSection ( SolutionProperties ) = preSolution
+		HideSolutionNode =  FALSE
+	EndGlobalSection
+	GlobalSection ( ExtensibilityGlobals ) = postSolution
+		SolutionGuid =  {1395860D-775C-4E8A-A21E-87237C535B8F}
+	EndGlobalSection
+EndGlobal

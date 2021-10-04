@@ -1,0 +1,112 @@
+<? xml version = " 1.0 " encoding = " utf-8 " ?>
+< Project  ToolsVersion = " 15.0 "  xmlns = " http://schemas.microsoft.com/developer/msbuild/2003 " >
+  < Import  Project = " .. \ packages \ EntityFramework.6.4.4 \ build \ EntityFramework.props "  Condition = " Exists ('.. \ packages \ EntityFramework.6.4.4 \ build \ EntityFramework.props') " />
+  < Import  Project = " $ (MSBuildExtensionsPath) \ $ (MSBuildToolsVersion) \ Microsoft.Common.props "  Condition = " Exists ('$ (MSBuildExtensionsPath) \ $ (MSBuildToolsVersion) \ Microsoft.Common.props') " />
+  < PropertyGroup >
+    < Configuration  Condition = " '$ (Configuration)' == '' " > Debug </ Configuration >
+    < Platform  Condition = " '$ (Platform)' == '' " > AnyCPU </ Platform >
+    < ProjectGuid > {96B31FC4-C7C4-457F-AC19-CAE4A91BC917} </ ProjectGuid >
+    < OutputType > Biblioteca </ OutputType >
+    < AppDesignerFolder > Propriedades </ AppDesignerFolder >
+    < RootNamespace > Serviçoa </ RootNamespace >
+    < AssemblyName > Serviçoa </ AssemblyName >
+    < TargetFrameworkVersion > v4.7.2 </ TargetFrameworkVersion >
+    < FileAlignment > 512 </ FileAlignment >
+    < Determinístico > verdadeiro </ Determinístico >
+    < NuGetPackageImportStamp >
+    </ NuGetPackageImportStamp >
+  </ PropertyGroup >
+  < PropertyGroup  Condition = " '$ (Configuration) | $ (Platform)' == 'Debug | AnyCPU' " >
+    < DebugSymbols > true </ DebugSymbols >
+    < DebugType > completo </ DebugType >
+    < Optimize > false </ Optimize >
+    < OutputPath > bin \ Debug \ </ OutputPath >
+    < DefineConstants > DEBUG; TRACE </ DefineConstants >
+    < ErrorReport > prompt </ ErrorReport >
+    < WarningLevel > 4 </ WarningLevel >
+  </ PropertyGroup >
+  < PropertyGroup  Condition = " '$ (Configuration) | $ (Platform)' == 'Release | AnyCPU' " >
+    < DebugType > pdbonly </ DebugType >
+    < Optimize > true </ Optimize >
+    < OutputPath > bin \ Release \ </ OutputPath >
+    < DefineConstants > TRACE </ DefineConstants >
+    < ErrorReport > prompt </ ErrorReport >
+    < WarningLevel > 4 </ WarningLevel >
+  </ PropertyGroup >
+  < ItemGroup >
+    < Reference  Include = " EntityFramework, Version = 6.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ EntityFramework.6.4.4 \ lib \ net45 \ EntityFramework.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " EntityFramework.SqlServer, Version = 6.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ EntityFramework.6.4.4 \ lib \ net45 \ EntityFramework.SqlServer.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " Microsoft.AspNet.Identity.Core, Version = 2.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ Microsoft.AspNet.Identity.Core.2.2.3 \ lib \ net45 \ Microsoft.AspNet.Identity.Core.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " Microsoft.AspNet.Identity.EntityFramework, Version = 2.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ Microsoft.AspNet.Identity.EntityFramework.2.2.3 \ lib \ net45 \ Microsoft.AspNet.Identity.EntityFramework.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " Microsoft.AspNet.Identity.Owin, Version = 2.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ Microsoft.AspNet.Identity.Owin.2.2.3 \ lib \ net45 \ Microsoft.AspNet.Identity.Owin.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " Microsoft.Owin, Version = 4.2.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ Microsoft.Owin.4.2.0 \ lib \ net45 \ Microsoft.Owin.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " Microsoft.Owin.Host.SystemWeb, Version = 4.2.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ Microsoft.Owin.Host.SystemWeb.4.2.0 \ lib \ net45 \ Microsoft.Owin.Host.SystemWeb.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " Microsoft.Owin.Security, Version = 4.2.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ Microsoft.Owin.Security.4.2.0 \ lib \ net45 \ Microsoft.Owin.Security.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " Microsoft.Owin.Security.Cookies, Version = 4.2.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ Microsoft.Owin.Security.Cookies.4.2.0 \ lib \ net45 \ Microsoft.Owin.Security.Cookies.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " Microsoft.Owin.Security.OAuth, Version = 4.2.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ Microsoft.Owin.Security.OAuth.4.2.0 \ lib \ net45 \ Microsoft.Owin.Security.OAuth.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " Newtonsoft.Json, Version = 13.0.0.0, Culture = neutral, PublicKeyToken = 30ad4fe6b2a6aeed, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ Newtonsoft.Json.13.0.1 \ lib \ net45 \ Newtonsoft.Json.dll </ HintPath >
+    </ Referência >
+    < Reference  Include = " Owin, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = f0ebd12fd5e55cc5, processorArchitecture = MSIL " >
+      < HintPath > .. \ packages \ Owin.1.0 \ lib \ net40 \ Owin.dll </ HintPath >
+    </ Referência >
+    < Incluir Referência  = " Sistema " />
+    < Referência  Incluir = " System.ComponentModel.DataAnnotations " />
+    < Referência  Incluir = " System.Core " />
+    < Referência  Incluir = " System.Xml.Linq " />
+    < Referência  Incluir = " System.Data.DataSetExtensions " />
+    < Referência  Incluir = " Microsoft.CSharp " />
+    < Referência  Incluir = " System.Data " />
+    < Referência  Incluir = " System.Net.Http " />
+    < Referência  Incluir = " System.Xml " />
+  </ ItemGroup >
+  < ItemGroup >
+    < Compile  Include = " Cadastros \ FabricanteServico.cs " />
+    < Compile  Include = " Cadastros \ ProdutoServico.cs " />
+    < Compile  Include = " Properties \ AssemblyInfo.cs " />
+    < Compile  Include = " Tabelas \ CategoriaServico.cs " />
+  </ ItemGroup >
+  < ItemGroup >
+    < ProjectReference  Include = " .. \ Modeloa \ Modeloa.csproj " >
+      < Projeto > {F758DF91-E4D7-4793-8143-A0751C0E6415} </ Projeto >
+      < Nome > Modeloa </ Nome >
+    </ ProjectReference >
+    < ProjectReference  Include = " .. \ Persistenciaa \ Persistenciaa.csproj " >
+      < Projeto > {3E1ABA5E-B7F4-40CB-870A-F408F7247CF2} </ Projeto >
+      < Nome > Persistenciaa </ Nome >
+    </ ProjectReference >
+  </ ItemGroup >
+  < ItemGroup >
+    < None  Include = " App.config " />
+    < Nenhum  Incluir = " packages.config " />
+  </ ItemGroup >
+  < Import  Project = " $ (MSBuildToolsPath) \ Microsoft.CSharp.targets " />
+  < Target  Name = " VerifyNuGetPackageBuildImports "  BeforeTargets = " PrepareForBuild " >
+    < PropertyGroup >
+      < ErrorText > Este projeto faz referência a pacotes para fazer NuGet que não estão presentes neste computador. Use um Restauração de Pacotes do NuGet para baixá-los. Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}. </ ErrorText >
+    </ PropertyGroup >
+    < Error  Condition = " ! Exists ('.. \ packages \ EntityFramework.6.4.4 \ build \ EntityFramework.props') "  Text = " $ ([System.String] :: Format ('$ (ErrorText)', ' .. \ packages \ EntityFramework.6.4.4 \ build \ EntityFramework.props ')) " />
+    < Error  Condition = " ! Exists ('.. \ packages \ EntityFramework.6.4.4 \ build \ EntityFramework.targets') "  Text = " $ ([System.String] :: Format ('$ (ErrorText)', ' .. \ packages \ EntityFramework.6.4.4 \ build \ EntityFramework.targets ')) " />
+  </ Alvo >
+  < Import  Project = " .. \ packages \ EntityFramework.6.4.4 \ build \ EntityFramework.targets "  Condition = " Exists ('.. \ packages \ EntityFramework.6.4.4 \ build \ EntityFramework.targets') " />
+</ Projeto >

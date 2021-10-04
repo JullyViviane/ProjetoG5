@@ -1,0 +1,34 @@
+@model Modeloa . Cadastros . Produto
+@ {
+    Layout  =  " ~ / Views / Shared / _LayoutPage1.cshtml " ;
+    ViewBag . Título  =  " Registrando um NOVO PRODUTO " ;
+}
+@ using ( Html . BeginForm ())
+{
+    @ Html.AntiForgeryToken ()
+    < div  class = " panel panel-primary " >
+        < div  class = " panel-header " >
+            Registro  de  um  NOVO  PRODUTO
+        </ div >
+        < div  class = " panel-body " >
+            @ Html.Partial ( " ~ / Areas / Cadastros / Visualizações / Produtos / _PartialEditContentPanel.cshtml " , Modelo ).
+        </ div >
+        < div  class = " panel-footer panel-info " >
+            < div  class = " col-md-offset-2 col-md-10 " >
+                < input  type = " submit "  value = " Adicionar Produto "  class = " btn btn-danger " />
+                @ Html.ActionLink ( " Retornar para a listagem de PRODUTOS " , " Index " , null ,
+                novo  {  @class  =  " btn btn-warning "  } )
+            </ div >
+            < Br />
+            < Br />
+        </ div >
+    </ div >
+}
+@section ScriptPage {
+    < script  type = " text / javascript " >
+        $ ( documento ). pronto ( função () {
+            $ ( ' li ' ). removeClass ( " ativo " );
+            $ ( ' #liProdutos ' ). addClass ( " ativo " );
+        });
+    </ script >
+}

@@ -1,0 +1,29 @@
+// <gerado automaticamente />
+namespace  Persistenciaa . Migrações
+{
+    usando o  sistema . CodeDom . Compiler ;
+    usando o  sistema . Dados . Entidade . Migrações ;
+    usando o  sistema . Dados . Entidade . Migrações . Infraestrutura ;
+    usando o  sistema . Recursos ;
+    
+    [ GeneratedCode ( " EntityFramework.Migrations " , " 6.2.0-61023 " )]
+     classe parcial selada  pública InitialCreate : IMigrationMetadata  
+    {
+        private  readonly  ResourceManager  Recursos  =  new  ResourceManager ( typeof ( InitialCreate ));
+        
+        string IMigrationMetadata.Id
+        {
+            obter {return "202108140122131_InitialCreate"; }
+        }
+        
+        string  IMigrationMetadata . Fonte
+        {
+            get { return  null ; }
+        }
+        
+        string  IMigrationMetadata . Alvo
+        {
+            get { return  Resources . GetString ( " Destino " ); }
+        }
+    }
+}

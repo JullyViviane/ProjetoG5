@@ -1,0 +1,27 @@
+@model Modeloa . Cadastros . Produto
+@ {
+    Layout  =  " ~ / Views / Shared / _LayoutPage1.cshtml " ;
+    ViewBag . Title  =  " Visualizando os dados de um PRODUTO " ;
+}
+< div  class = " panel panel-primary " >
+    < div  class = " panel-header " >
+        Visualizando detalhes de um PRODUTO
+    </ div >
+    < div  class = " panel-body " >
+        @ Html.Partial ( "~ / Areas / Cadastros / Visualizações / Produtos / _PartialEditContentPanel.cshtml", Modelo).
+    </ div >
+    < div  class = " panel-footer panel-info " >
+        @ Html.ActionLink ( " alterar ", "Editar", novo {  id  =  Model . ProdutoId  } ,
+        novo {  @class  =  " btn btn-info "  } )
+        @ Html.ActionLink ( "Retornar para a listagem", "Index", null,
+        novo {  @class  =  " btn btn-info "  } )
+    </ div >
+</ div >
+@section ScriptPage {
+    < script  type = " text / javascript " >
+$ ( documento ). pronto ( função () {
+$ ( ' li ' ). removeClass ( " ativo " );
+$ ( ' #liProdutos ' ). addClass ( " ativo " );
+});
+    </ script >
+}
