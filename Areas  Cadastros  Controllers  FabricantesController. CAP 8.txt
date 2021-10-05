@@ -1,0 +1,29 @@
+using  System ;
+usando o  sistema . Coleções . Genérico ;
+usando o  sistema . Dados . Entidade ;
+usando o  sistema . IO ;
+usando o  sistema . Linq ;
+usando o  sistema . Rede ;
+usando o  sistema . Web ;
+usando o  sistema . Web . Mvc ;
+usando o  Modelo . Cadastros ;
+// usando Projeto_G2.Context;
+usando o  Servi ç o . Cadastros ;
+
+namespace  Projeto_G2 . Áreas . Cadastros . Controladores
+@@ -16,7 +16,7 @@ public class FabricantesController: Controller
+            // contexto EFContext privado = new EFContext ();
+
+            private  FabricanteServico  fabricanteServico  =  novo  FabricanteServico ();
+            Private  ActionResult  ObterVisaoFabricantePorId ( long ? id )
+        Private  ActionResult  ObterVisaoFabricantePorId ( long ? id )
+            {
+                if ( id  ==  null )
+                {
+@@ -119,5 +119,5 @@ public ActionResult Delete (long id)
+                    return  View ();
+                }
+            }
+        }
+    }
+}

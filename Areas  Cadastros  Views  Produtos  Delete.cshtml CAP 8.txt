@@ -1,0 +1,46 @@
+@model Modelo . Cadastros . Produto
+@ {
+    Layout  =  " ~ / Views / Shared / _Layout.cshtml " ;
+    ViewBag . Title  =  " Visualizando detalhes do PRODUTO a ser vitoriana " ;
+}
+< div  class = " panel panel-primary " >
+    < div  class = " panel-header " >
+        Visualizando detalhes do PRODUTO a ser vista
+    </ div >
+    < div  class = " panel-body " >
+        @ Html.Partial ( "~ / Areas / Cadastros / Visualizações / Produtos / _PartialEditContentPanel .cshtml", Modelo)
+        @ Html.Partial ( "~ / Areas / Cadastros / Visualizações / Produtos / _PartialDetailsContentPanel .cshtml", Modelo)
+    </ div >
+    < div  class = " panel-footer panel-info " >
+        < A  href = " # "  class = " btn btn-info "  -toggle dados = " modais "  data-alvo = " #deleteConfirmationModal " > Remover </ a >
+@@ -35,8 +35,7 @@
+                        Você está certo que deseja prosseguir?
+                    </ forte >
+                </ p >
+                @ using ( Html . BeginForm (" Delete ", " Produtos ", FormMethod . Post ,
+                novo {  @id  =  " delete-form " , role  =  " form "  } ))
+                @ using ( Html . BeginForm (" Delete ", " Produtos ", FormMethod . Post , novo { @id  = " delete - form ", role  = " form "}))
+                {
+                    @ Html.HiddenFor (m  = >  m . ProdutoId )
+                    @ Html.AntiForgeryToken ()
+}
+            </ div >
+            < div  class = " modal-footer " >
+                < button  type = " button "  class = " btn btn-default "  onclick = " $ ('# delete-form'). submit (); " >
+                    Sim, exclua este produto.
+                </ botão >
+                < button  type = " button "  class = " btn btn-primary "  data-despedir = " modal " >
+                    Não, não exclua este produto.
+                </ botão >
+            </ div >
+        </ div >
+    </ div >
+</ div >
+@section ScriptPage {
+    < script  type = " text / javascript " >
+        $ ( documento ). pronto ( função () {
+            $ ( ' li ' ). removeClass ( " ativo " );
+            $ ( ' #liProdutos ' ). addClass ( " ativo " );
+        });
+    </ script >
+}

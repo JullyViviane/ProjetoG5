@@ -1,0 +1,24 @@
+usando o  sistema . Web . Mvc ;
+
+namespace  Projeto_G2 . Áreas . Casa
+{
+    public  class  HomeAreaRegistration : AreaRegistration 
+    {
+        public  override  string  AreaName 
+        {
+            pegue 
+            {
+                retornar  " Home " ;
+            }
+        }
+
+        public  override  void  RegisterArea ( AreaRegistrationContext  context )
+        {
+            contexto . MapRoute (
+                " Home_default " ,
+                " Home / {controller} / {action} / {id} " ,
+                novo { action  =  " Índice " , id  =  UrlParameter . Opcional }
+            );
+        }
+    }
+} 

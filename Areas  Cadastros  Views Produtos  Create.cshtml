@@ -1,0 +1,44 @@
+Layout  =  " ~ / Views / Shared / _Layout.cshtml " ;
+    ViewBag . Título  =  " Registrando um NOVO PRODUTO " ;
+}
+@ using ( Html . BeginForm ())
+@ using ( Html . BeginForm ( " Create ", " Produtos ", FormMethod . Post , new { enctype = " multipart / form - data "} )) 
+{
+    @ Html.AntiForgeryToken ()
+    < div  class = " panel panel-primary " >
+@@ -12,14 +12,31 @@
+        </ div >
+        < div  class = " panel-body " >
+            @ Html.Partial ( " ~ / Areas / Cadastros / Visualizações / Produtos / _PartialEditContentPanel.cshtml " , Modelo )
+            @ Html.HiddenFor (model  = >  model . ProdutoId )
+            @ Html.HiddenFor (model  = >  model . LogotipoMimeType )
+            @ Html.HiddenFor (model  = >  model . Logotipo )
+            < div  class = " col-md-offset-7 col-md-5 " >
+                < div  class = " form-group " >
+                    @ Html.TextBox ( " logotipo " , " " , nova  {  tipo  =  " arquivo "  } ) < br />
+                </ div >
+            </ div >
+            < div  class = " panel-footer panel-info " >
+                < div  class = " col-md-offset-2 col-md-10 " >
+                    < input  type = " submit "  value = " Adicionar Produto "  class = " btn btn-danger " />
+                    @ Html.ActionLink ( " Retornar para a listagem de PRODUTOS " , " Index " , null ,
+                    novo  {  @class  =  " btn btn-warning "  } )
+                </ div >
+                < Br />
+                < Br />
+            </ div >
+        </ div >
+    </ div >
+}
+@section ScriptPage {
+    < script  type = " text / javascript " >
+$ ( documento ). pronto ( função () {
+$ ( ' li ' ). removeClass ( " ativo " );
+$ ( ' #liProdutos ' ). addClass ( " ativo " );
+});
+        $ ( documento ). pronto ( função () {
+            $ ( ' li ' ). removeClass ( " ativo " );
+            $ ( ' #liProdutos ' ). addClass ( " ativo " );
+        });
+    </ script >
+}

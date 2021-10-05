@@ -1,0 +1,40 @@
+<! DOCTYPE html>
+< html >
+< cabeça >
+    < meta  name = " viewport "  content = " largura = largura do dispositivo, escala inicial = 1,0 "
+          charset = " utf-8 " />
+    < title > @ ViewBag.Title </ title >
+    < link  href = " @ Url.Content ( " ~ / content / bootstrap.css " ) "  rel = " stylesheet " />
+    @RenderSection ( "estilos", falso)
+    < link  href = " @ Url.Content ( " ~ / content / bootstrap.css " ) "  rel = " stylesheet " /> @RenderSection ( "styles", false)
+</ head >
+< corpo >
+    < div  class = " container " >
+@@ -39,12 +38,11 @@
+        < div  class = " row " >
+            < div  class = " col-xs-3 col-md-3 bg-success " >
+                < ul  class = " nav nav-pills nav-stacked " >
+                    < Li  id = " liHome "  papel = " apresentação "  class = " ativo " > < a href = " # " > Início </ a > </ li > 
+                    < li  id = " liHome "  role = " presentation "  class = " active " > @ Html.ActionLink ( "Home", "Index", " Home ", novo { Area = " Home " } , null) </ li >    
+                    < li  id = " liCategorias "  role = " presentation " > @ Html.ActionLink ( "Categorias", "Índice", "Categorias", novo {  Area  =  " Tabelas "  } , nulo) </ li >
+                    < li  id = " liFabricantes "  role = " presentation " > @ Html.ActionLink ( "Fabricantes", "Index", "Fabricantes", novo {  Area  =  " Cadastros "  } , null) </ li >
+                    < li  id = " liProdutos "  role = " presentation " > @ Html.ActionLink ( "Produtos", "Index", "Produtos", new {  Area  =  " Cadastros "  } , null) </ li >
+                    < li  id = " liUsuarios "  role = " apresentação " >
+                        @ Html.ActionLink ( "Usuários", "Index", "Admin", novo {  Area  =  " Seguranca "  } , null)
+                    < li  id = " liUsuarios "  role = " presentation " > @ Html.ActionLink ( "Usuários", "Index", "Admin", new {  Area  =  " Seguranca "  } , null)
+                    </ li >
+                </ ul >
+        </ div >
+@@ -63,6 +61,12 @@
+< script  src = " @ Url.Content ( " ~ / scripts / bootstrap.js " ) " > </ script >
+< script  src = " @ Url.Content ( " ~ / Scripts / jquery.validate.js " ) " > </ script >
+< script  src = " @ Url.Content ( " ~ / Scripts / jquery.validate.unobtrusive.js " ) " > </ script >
+< script  type = " text / javascript " >
+    $ ( documento ). pronto ( função () {
+        $ ( ' li ' ). removeClass ( " ativo " );
+        $ ( ' #liFabricantes ' ). addClass ( " ativo " );
+    });
+</ script >
+@RenderSection ( "ScriptPage", false);
+</ body >
+</ html >

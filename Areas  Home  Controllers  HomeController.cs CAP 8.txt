@@ -1,0 +1,32 @@
+usando o  Modelo . Cadastros ;
+usando o  Servi ç o . Cadastros ;
+using  System ;
+usando o  sistema . Coleções . Genérico ;
+usando o  sistema . Linq ;
+usando o  sistema . Web ;
+usando o  sistema . Web . Mvc ;
+
+namespace  Projeto_G2 . Áreas . Home . Controladores
+{
+    public  class  HomeController : Controller
+    {
+        ProdutoServico  produtoServico  =  novo  ProdutoServico ();
+
+        // GET Home
+         Índice ActionResult  público ()
+        {
+            return  View ( produtoServico . ObterProdutosClassificadosPorNome ());
+        }
+
+
+        public  FileContentResult  GetLogotipo ( long  id )
+        {
+            Produto  produto  =  produtoServico . ObterProdutoPorId ( id );
+            if ( produto  ! =  nulo )
+            {
+                voltar  Ficheiro ( produto . Logotipo , produto . LogotipoMimeType );
+            }
+            return  null ;
+        }
+    }
+} 

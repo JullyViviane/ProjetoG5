@@ -1,0 +1,29 @@
+using  System ;
+usando o  sistema . Coleções . Genérico ;
+usando o  sistema . Linq ;
+usando o  sistema . Web ;
+usando o  sistema . Dados . Entidade ;
+usando o  Modelo . Tabelas ;
+usando o  Modelo . Cadastros ;
+usando o  sistema . Dados . Entidade . ModelConfiguration . Convenções ;
+usando  Persistir ê ncia . Migrações ;
+
+namespace  Persistencia . Contextos
+{
+    público  classe  EFContext : DbContext
+    {
+        public  EFContext (): base ( " Asp_Net_MVC_CS " ) {
+            Banco de dados . SetInitializer < EFContext > ( novo
+            MigrateDatabaseToLatestVersion <EFContext, Configuration> ());
+        }
+        public  DbSet < Categoria >  Categorias { get ; definir ; }
+        public  DbSet < Fabricante >  Fabricantes { get ; definir ; }
+        public  DbSet < Produto >  Produtos { get ; definir ; }
+
+        protected  override  void  OnModelCreating ( DbModelBuilder  modelBuilder )
+        {
+            base . OnModelCreating ( modelBuilder );
+            modelBuilder . Convenções . Remova < PluralizingTableNameConvention > ();
+        }
+    }
+}
