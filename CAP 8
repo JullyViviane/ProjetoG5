@@ -1,0 +1,44 @@
+using Modelo.Tabelas;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+namespace Modelo.Cadastros
+{
+    public class Produto
+    {
+        [ DisplayName ( " Id " )]
+        público por  muito tempo ? ProdutoId { get ; definir ; }
+
+
+        [ StringLength ( 100 , ErrorMessage  =  " O nome do produto precisa ter no mínimo 10 caracteres " , MinimumLength  =  10 )]
+        [ Obrigatório ( ErrorMessage  =  " Informe o nome do produto " )]
+         string  pública Nome { get ; definir ; }
+
+
+        [ DataType ( DataType . Date )]
+        [ DisplayName ( " Data de Cadastro " )]
+        [ Requerido ( ErrorMessage  =  " Informe um dado de cadastro do produto " )]
+        public  DateTime ? DataCadastro { get ; definir ; }
+
+
+        [ DisplayName ( " Categoria " )]
+        público por  muito tempo ? CategoriaId { obter ; definir ; }
+
+
+        [ DisplayName ( " Fabricante " )]
+        público por  muito tempo ? FabricanteId { get ; definir ; }
+
+        // Campos associados ao arquivo de imagem
+        public  string  LogotipoMimeType { get ; definir ; }
+         byte público [] Logotipo { get ; definir ; }
+         string  pública NomeArquivo { get ; definir ; }
+        public  long  TamanhoArquivo { get ; definir ; }
+
+        float público Preço {get; definir; }
+
+        público Categoria Categoria {get; definir; }
+        public  Fabricante  Fabricante { get ; definir ; }
+    }
